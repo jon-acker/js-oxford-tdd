@@ -1,0 +1,20 @@
+{
+  "name": "es6-tdd",
+  "version": "1.0.0",
+  "description": "Example of TDD/BDD in ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jon.acker@yoyo.org",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "cucumber": "^3.2.0",
+    "jasmine": "^2.8.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "uglifyjs-webpack-plugin": "^1.1.4"
+  }
+}
