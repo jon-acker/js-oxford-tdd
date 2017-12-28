@@ -2,7 +2,7 @@ const jasmine = require('jasmine');
 
 const Basket = require('../src/Basket');
 const Catalog = require('../src/Catalog');
-const remoteCatalog = require('../src/remoteCatalog');
+const remoteListing = require('../src/remoteListing');
 
 describe('Adding products', function () {
 
@@ -13,7 +13,6 @@ describe('Adding products', function () {
     catalog = new Catalog();
     basket = new Basket(catalog);
     spyOn(catalog, 'hasAll');
-    spyOn(remoteCatalog, 'fetch').and.returnValue([]);
   });
 
   it('is total products added to the basket', function () {
@@ -38,8 +37,4 @@ describe('Adding products', function () {
     expect(catalog.hasAll).toHaveBeenCalled();
   }); 
 
-  it ('calls remote catalog fetch', function() {
-    expect(basket.remoteList()).toEqual([]);
-    expect(remoteCatalog.fetch).not.toHaveBeenCalled();
-  });
 });

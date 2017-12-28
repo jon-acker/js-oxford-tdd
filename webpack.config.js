@@ -1,4 +1,4 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: './main.js',
@@ -8,4 +8,4 @@ module.exports = {
     plugins: [
         new UglifyJsPlugin()
     ]
-}
+};

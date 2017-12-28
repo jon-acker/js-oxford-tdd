@@ -1,5 +1,4 @@
 const Catalog = require ('./Catalog');
-const remoteCatalog = require('./remoteCatalog');
 
 module.exports = class Basket 
 {
@@ -21,8 +20,4 @@ module.exports = class Basket
     available() {
         return this.catalog.hasAll([{product: 'cd'}]);
     }
-
-    remoteList() {
-        return remoteCatalog.fetch();
-    }
-}
+};
