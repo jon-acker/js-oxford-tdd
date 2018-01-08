@@ -1,5 +1,3 @@
-const Catalog = require ('./Catalog');
-
 module.exports = class Basket 
 {
     constructor(catalog) {
@@ -14,7 +12,7 @@ module.exports = class Basket
     total() {
         return this.items
             .filter(item => item.price !== undefined)
-            .reduce((total, item) => total + item.price, 0)
+            .reduce((total, item) => total + item.price, 0);
     }
 
     available() {

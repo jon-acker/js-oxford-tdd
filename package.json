@@ -9,6 +9,8 @@
   "author": "jon.acker@yoyo.org",
   "license": "MIT",
   "dependencies": {
+    "jquery": "^3.2.1",
+    "jsdom": "^11.5.1",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
