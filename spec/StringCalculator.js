@@ -1,31 +1,27 @@
-/* global it, describe, beforeEach, expect */
-
 const StringCalculator = require('../src/StringCalculator');
-let calculator;
 
-describe('The String Calculator', function() {
+describe('A String Calculator', function ()  {
+    it('It returns 0 for an empty string', function () {
+        let calculator = new StringCalculator();
 
-    beforeEach(function() {
-        calculator = new StringCalculator();
-    });
+        expect(calculator.exec('')).toBe(0);
+    })
 
-    it('returns 0 for an empty string', function() {
-        expect(calculator.add('')).toBe(0);
-    });
+    it('It returns just bare number', function () {
+        let calculator = new StringCalculator();
 
-    it('returns bare number given one number', function() {
-        expect(calculator.add('2')).toBe(2);
-    });
+        expect(calculator.exec('3')).toBe(3);
+    })
 
-    it('returns sum of two space separated numbers', function() {
-        expect(calculator.add('2 3')).toBe(5);
-    }); 
+    it('It returns sum of two space separated numbers', function () {
+        let calculator = new StringCalculator();
 
-    it('returns sum of many space separated numbers', function() {
-        expect(calculator.add('1 2 3')).toBe(6);
-    }); 
+        expect(calculator.exec('1 2')).toBe(3);
+    })
 
-    // it('returns sum of any whitespace separated numbers', function() {
-    //     expect(calculator.add('2 3\t4')).toBe(9);
-    // }); 
+    it('It returns sum of any space separated numbers', function () {
+        let calculator = new StringCalculator();
+
+        expect(calculator.exec('1 2 3')).toBe(6);
+    })
 });

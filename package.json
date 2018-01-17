@@ -9,14 +9,15 @@
   "author": "jon.acker@yoyo.org",
   "license": "MIT",
   "dependencies": {
+    "chai": "^4.1.2",
     "jquery": "^3.2.1",
-    "jsdom": "^11.5.1",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
     "cucumber": "^3.2.0",
     "jasmine": "^2.8.0",
     "jasmine-spec-reporter": "^4.2.1",
-    "uglifyjs-webpack-plugin": "^1.1.4"
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "jsdom": "^11.5.1"
   }
 }

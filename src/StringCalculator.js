@@ -1,14 +1,16 @@
-function sum(array) {
-    return array.reduce((t, n) => t + +n, 0);
+function sumNumbers(numbers) {
+    return +numbers.reduce((total, number) => +total + +number);
 }
 
-module.exports = class StringCalculator 
-{
-    add(experssion) {
-        if (!experssion || experssion.length === 1) {
-            return +experssion;
-        }
+function parseExpression(expression) {
+    return expression.split(/ /);
+}
 
-        return sum(experssion.split(/\s/));
+module.exports = class StringCalculator {
+
+    exec(expression) {
+        let numbers = parseExpression(expression);
+
+        return sumNumbers(numbers);
     }
 };

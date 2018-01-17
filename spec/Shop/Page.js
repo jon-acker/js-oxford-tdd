@@ -1,5 +1,5 @@
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+const { JSDOM } = require('jsdom');
+
 const dom = new JSDOM("<html><div id='main'></div></html>");
 
 // setting up "fake" window/document from jsdom

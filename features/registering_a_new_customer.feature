@@ -4,10 +4,10 @@ Feature: Registering a new customer
         Given Acme's compliance system requires customers to be at least 18 years old
 
     Scenario: Customer cannot be registered if their name is not in the phone directory
-        Given Jon is not listed in the Greater London telephone directory
-        When Jon tries to register for Acme Systems
-        Then Jon should be told they cannot be registered because they are not listed
-        And Jon should not be registered with Acme Systems
+        Given "Jon" is not listed in the Greater London telephone directory
+        When "Jon" tries to register for Acme Systems
+        Then "Jon" should be told they cannot be registered because they are not listed
+        And "Jon" should not be registered with Acme Systems
 
     Scenario: Customer cannot be registered if they are not compliant with Acme's rules
         Given Jon is listed in the Greater London telephone directory
